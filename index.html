@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Survey Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/survey-page-fcc.css">
+	<link rel="stylesheet" type="text/css" href="components/jcf/styles/jcf.css">
+</head>
+
+<body>
+	<header class="text-center">
+		<h1>Survey Form</h1>
+	</header>
+
+	<div class="wrapper">
+		<form id="survey-form" name="survey" action="#" onsubmit="#" method="POST">
+
+			<div class="form__section">
+				<main>
+						<p>Let us know how we can improve freeCodeCamp</p>
+					<fieldset>
+						<legend class="sr-only">Personal Information</legend>
+						<div class="grid-section">
+							<div class="grid-section__labels">
+								<label id="name-label" for="name">* Name:</label>
+							</div>
+							<div class="grid-section__inputs">
+								<input id="name" class="form__input--character try" type="text" name="name" maxlength="50" placeholder="Enter Your Name"
+								 autofocus required>
+							</div>
+							<div class="grid-section__labels">
+								<label id="email-label" for="email">* Email:</label>
+							</div>
+							<div class="grid-section__inputs">
+								<input id="email" class="form__input--character" type="email" name="email" maxlength="50" placeholder="Email"
+								 required>
+							</div>
+							<div class="grid-section__labels">
+								<label id="number-label" for="number">* Age:</label>
+							</div>
+							<div class="grid-section__inputs">
+								<input id="number" class="form__input--character" type="number" name="age" min="1" max="101" placeholder="Age"
+								 required>
+							</div>
+						</div>
+					</fieldset>
+				</main>
+			</div>
+
+			<div class="form__section" style="background-color: #eee9e9;">
+				<div class="grid-section">
+					<div class="grid-section__labels">
+						<label id="dropdown-label" for="current-pos">Which option best describes your current role?</label>
+					</div>
+					<div class="grid-section__inputs">
+						<select id="current-pos" name="current-pos">
+							<option disabled selected value>Select an option</option>
+							<option value="student">Student</option>
+							<option value="job">Full Time Job </option>
+							<option value="learner">Full Time Learner</option>
+							<option value="preferNo">Prefer Not to Say</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+				</div>
+
+				<fieldset>
+					<div class="grid-section">
+						<div class="grid-section__labels">
+							<legend>* How likely is that you would recommend freeCodeCamp to a friend?</legend>
+						</div>
+						<div class="grid-section__inputs">
+							<input id="definitely" type="radio" name="somename" value="definitely">
+							<label id="radio-option-one" for="definitely">Definitely</label><br>
+							<input id="maybe" type="radio" name="somename" value="maybe">
+							<label id="radio-option-two" for="maybe">Maybe</label><br>
+							<input id="not-sure" type="radio" name="somename" value="not-sure">
+							<label id="radio-option-three" for="not-sure">Not Sure</label><br>
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="grid-section">
+					<div class="grid-section__labels">
+						<label id="preference-options" for="preference">What do you like most in FCC?</label>
+					</div>
+					<div class="grid-section__inputs">
+						<select id="preference" name="preference">
+							<option disabled selected value>Select an option</option>
+							<option value="challenges">Challenges</option>
+							<option value="projects">Projects</option>
+							<option value="community">Community</option>
+							<option value="openSource">Open Source</option>
+						</select>
+					</div>
+				</div>
+
+				<fieldset>
+					<div class="grid-section">
+						<div class="grid-section__labels">
+							<legend>Things that should be improved in the future (Check all that apply):</legend>
+						</div>
+						<div class="grid-section__inputs">
+							<ul>
+								<li><label><input type="checkbox" name="front-end" value="value1" id="checkbox-one">Front-end
+											Projects</label></li>
+								<li><label><input type="checkbox" name="back-end" value="value2" id="checkbox-two">Back-end Projects</label></li>
+								<li><label><input type="checkbox" name="data-visualization" value="value3" id="checkbox-three">Data Visualization</label></li>
+								<li><label><input type="checkbox" name="challenges" value="value4"id="checkbox-four">Challenges</label></li>
+								<li><label><input type="checkbox" name="open-source" value="value5" id="checkbox-five">Open Source Community</label></li>
+								<li><label><input type="checkbox" name="gitter-help" value="value6" id="checkbox-six">Gitter help rooms</label></li>
+								<li><label><input type="checkbox" name="videos" value="value7" id="checkbox-seven">Videos</label></li>
+								<li><label><input type="checkbox" name="city-meetups" value="value8" id="checkbox-eight">City Meetups</label></li>
+								<li><label><input type="checkbox" name="wiki" value="value9" id="checkbox-nine">Wiki</label></li>
+								<li><label><input type="checkbox" name="forum" value="value10" id="checkbox-ten">Forum</label></li>
+								<li	><label><input type="checkbox" name="additional-courses" value="value11" id="checkbox-eleven">Additional
+										Courses</label></li>
+							</ul>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="form__section">
+				<div class="grid-section">
+					<div class="grid-section__labels">
+						<label id="leave-comments" for="comments">Any comments or suggestions?</label>
+					</div>
+					<div class="grid-section__inputs">
+						<textarea id="comments" name="comments" maxlength="500" placeholder="Enter your comments here..."></textarea>
+					</div>
+				</div>
+				<div class="submit-button">
+						<button id="submit" type="submit" onclick="submitConfirm();">SUBMIT</button>
+					</div>
+			</div>
+			
+
+		</form>
+	</div>
+
+	<footer><a href="https://www.linkedin.com/in/illia-goldin/" target = "_blank">Created by Illia Goldin</a></footer>
+	<script src="scripts/jQuery.js"></script>
+	<script src="components/jcf/core/jcf.js"></script>
+	<script src="components/jcf/select/jcf.select.js"></script>
+	<script src="components/jcf/radio/jcf.radio.js"></script>
+	<script src="components/jcf/checkbox/jcf.checkbox.js"></script>
+	<script src="scripts/survey-page-fcc.js"></script>
+
+</body>
+
+</html>
